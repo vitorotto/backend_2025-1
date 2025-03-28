@@ -1,0 +1,11 @@
+C4Context
+title Diagrama de contexto plataforma de EAD
+
+Person(administrador, "Administrador/Diretor")
+Person(professor, "Professor")
+Person(aluno, "Aluno")
+System(sistemaEAD, "EstudaOnlinePlatform", "Onde os usuários podem acessar as aulas e seus dados")
+
+Rel("administrador","sistemaEAD","Administra")
+Rel("professor", "sistemaEAD", "Publica aulas")
+Rel("aluno", "sistemaEAD", "Assiste as aulas")
