@@ -1,17 +1,24 @@
-C4Context
-title System Context diagram for Internet Banking System
+C4Container
+title Diagrama de container
 
 Person(administrador, "Administrador/Diretor")
 Person(professor, "Professor")
 Person(aluno, "Aluno")
-System(sistema, "EstudaOnlinePlatform", "Onde os usuários podem acessar as aulas e seus dados")
+
+Container_Boundary(plataforma, "Plataforma") {
+    System(sistema, "EstudaOnlinePlatform", "Onde os usuários podem acessar as aulas e seus dados")
+}
+
 
 Enterprise_Boundary(b1, "EstudaOnlinePlatform_Board") {
-
     System(backend, "Backend [NODEJS, EXPRESS]", "Lógicas de negócios para o funcionamento do sistema")
     SystemDb(banco, "DataBase [mySQL]}", "Sistema onde os dados são armazenados em um banco mySQL")
     System(front, "Frontend [REACT, NEXTJS]", "Interface web para gerenciar o sistema, criar aulas, gerenciar usuários e assistir aulas")
 }
+
+Rel("administrador","sistema","Administra")
+Rel("professor", "sistema", "Publica aulas")
+Rel("aluno", "sistema", "Assiste as aulas")
 
 Rel(sistema, "backend", "HTTPS")
 BiRel(front, "backend", "")
