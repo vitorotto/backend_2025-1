@@ -1,0 +1,22 @@
+[{
+    "pedido": 5571,
+    "data": "2025-03-14",
+    "cliente": "Cliente 190",
+    "uf": "MA",
+    "codigoproduto": 19737,
+    "unidadeMedida": "KG",
+    "precoUnitario": 3503.66,
+    "quantidade": 11,
+    "descricaoProduto": "Pendrive 64GB"
+},
+{
+    "pedido": 8671,
+    "data": "2025-03-09",
+    "cliente": "Cliente 24",
+    "uf": "GO",
+    "codigoproduto": 27248,
+    "unidadeMedida": "UN",
+    "precoUnitario": 2503.53,
+    "quantidade": 36,
+    "descricaoProduto": "Notebook Gamer"
+}]
